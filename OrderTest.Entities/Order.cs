@@ -11,5 +11,12 @@ namespace OrderTest.Entities
         public string Name { get; set; }
         public OrderStatus Status { get; set; }
         public virtual IList<Product> ProductsList { get; set; }
+
+        public Order()
+        {
+            Id = Guid.NewGuid();
+            CreationDate = DateTime.UtcNow;
+            ProductsList = new List<Product>();
+        }
     }
 }

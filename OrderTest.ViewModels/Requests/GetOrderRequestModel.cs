@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OrderTest.ViewModels.Requests
 {
-    class GetOrderRequestModel
+    public class GetOrderRequestModel
     {
         public Guid OrderId { get; set; }
     }

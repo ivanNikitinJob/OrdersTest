@@ -22,7 +22,7 @@ namespace OrderTest.Repositories
         {
             try
             {
-                var result = await _context.Orders.Where(x => x.Id == orderId).SingleOrDefaultAsync();
+                var result = await _context.Orders.Include(x => x.ProductsList).Where(x => x.Id == orderId).SingleOrDefaultAsync();
                 return result;
             }
             catch (Exception exception)
@@ -36,7 +36,7 @@ namespace OrderTest.Repositories
         {
             try
             {
-                var result = await _context.Orders.Include(x => x.ProductsList).ToListAsync();
+                var result = await _context.Orders.ToListAsync();
                 return result;
             }
             catch (Exception exception)

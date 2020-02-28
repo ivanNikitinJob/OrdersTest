@@ -37,6 +37,9 @@ namespace OrdersTest.Web
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddControllers();
+            services.AddCors();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -52,6 +55,21 @@ namespace OrdersTest.Web
                 app.UseSpaStaticFiles();
             }
 
+            app.UseHttpsRedirection();
+
+            app.UseRouting();
+
+            app.UseCors(
+                options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()
+            ); 
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
             app.UseSpa(spa =>
             {
                 spa.Options.SourcePath = "ClientApp";
@@ -61,7 +79,6 @@ namespace OrdersTest.Web
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
-
         }
     }
 }

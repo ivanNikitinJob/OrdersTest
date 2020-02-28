@@ -25,10 +25,10 @@ namespace OrderTest.Services
                 Order order = await _orderRepository.GetOrder(orderId);
                 var result = new GetOrderResponseModel()
                 {
-                    CreationDate = order.CreationDate,
+                    CreationDate = order.CreationDate.ToShortDateString(),
                     Id = order.Id,
                     Name = order.Name,
-                    Status = order.Status
+                    Status = order.Status.ToString()
                 };
 
                 foreach (var product in order.ProductsList)
@@ -65,9 +65,9 @@ namespace OrderTest.Services
                     var orderModel = new GetOrdersResponseItem()
                     {
                         Name = order.Name,
-                        CreationDate = order.CreationDate,
+                        CreationDate = order.CreationDate.ToShortDateString(),
                         Id = order.Id,
-                        Status = order.Status
+                        Status = order.Status.ToString()
                     };
 
                     result.Orders.Add(orderModel);

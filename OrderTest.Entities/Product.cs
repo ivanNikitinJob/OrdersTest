@@ -10,6 +10,7 @@ namespace OrderTest.Entities
         public string Name { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
+        public Guid OrderId { get; set; }
         public virtual Order Order { get; set; }
         public virtual decimal TotalPrice
         {
@@ -17,6 +18,11 @@ namespace OrderTest.Entities
             {
                 return Quantity * Price;
             }
+        }
+
+        public Product()
+        {
+            Id = Guid.NewGuid();
         }
     }
 }

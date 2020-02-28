@@ -18,8 +18,8 @@ namespace OrderTest.ViewModels.Responses
     public class GetOrdersResponseItem
     {
         public Guid Id { get; set; }
-        public DateTime CreationDate { get; set; }
+        public string CreationDate { get; set; }
         public string Name { get; set; }
-        public OrderStatus Status { get; set; }
+        public string Status { get; set; }
     }
 }
