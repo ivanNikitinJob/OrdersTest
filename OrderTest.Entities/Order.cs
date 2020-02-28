@@ -10,6 +10,6 @@ namespace OrderTest.Entities
         public DateTime CreationDate { get; set; }
         public string Name { get; set; }
         public OrderStatus Status { get; set; }
-        public IList<Product> ProductsList { get; set; }
+        public virtual IList<Product> ProductsList { get; set; }
     }
 }

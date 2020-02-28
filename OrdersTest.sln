@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersTest.Web", "OrdersTestWeb\OrdersTest.Web.csproj", "{26235C3D-9C4F-4BB7-80AF-0413E11DFB6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderTest.Services", "OrderTest.Services\OrderTest.Services.csproj", "{F5672757-E3CF-4111-ACA4-75BDAD431959}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderTest.Services", "OrderTest.Services\OrderTest.Services.csproj", "{F5672757-E3CF-4111-ACA4-75BDAD431959}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderTest.Entities", "OrderTest.Entities\OrderTest.Entities.csproj", "{CE295D3A-4E01-4CCF-8E90-46DC4FA841A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderTest.Entities", "OrderTest.Entities\OrderTest.Entities.csproj", "{CE295D3A-4E01-4CCF-8E90-46DC4FA841A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderTest.Enums", "OrderTest.Enums\OrderTest.Enums.csproj", "{4CC6AB70-0D77-462C-AF1D-02B798C3BB0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderTest.Enums", "OrderTest.Enums\OrderTest.Enums.csproj", "{4CC6AB70-0D77-462C-AF1D-02B798C3BB0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderTest.Repositories", "OrderTest.Repositories\OrderTest.Repositories.csproj", "{995E06A4-DBA2-435F-8D39-99A8E96477C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderTest.Repositories", "OrderTest.Repositories\OrderTest.Repositories.csproj", "{995E06A4-DBA2-435F-8D39-99A8E96477C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderTest.ViewModels", "OrderTest.ViewModels\OrderTest.ViewModels.csproj", "{B322D311-46D5-4412-90D6-E87969DC12E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderTest.Web", "OrderTest.Web\OrderTest.Web.csproj", "{8EE48D6E-F072-4E55-BE33-A2A8AD000C84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{26235C3D-9C4F-4BB7-80AF-0413E11DFB6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{26235C3D-9C4F-4BB7-80AF-0413E11DFB6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{26235C3D-9C4F-4BB7-80AF-0413E11DFB6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{26235C3D-9C4F-4BB7-80AF-0413E11DFB6B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F5672757-E3CF-4111-ACA4-75BDAD431959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F5672757-E3CF-4111-ACA4-75BDAD431959}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5672757-E3CF-4111-ACA4-75BDAD431959}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +37,14 @@ Global
 		{995E06A4-DBA2-435F-8D39-99A8E96477C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{995E06A4-DBA2-435F-8D39-99A8E96477C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{995E06A4-DBA2-435F-8D39-99A8E96477C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B322D311-46D5-4412-90D6-E87969DC12E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B322D311-46D5-4412-90D6-E87969DC12E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B322D311-46D5-4412-90D6-E87969DC12E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B322D311-46D5-4412-90D6-E87969DC12E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EE48D6E-F072-4E55-BE33-A2A8AD000C84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EE48D6E-F072-4E55-BE33-A2A8AD000C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EE48D6E-F072-4E55-BE33-A2A8AD000C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EE48D6E-F072-4E55-BE33-A2A8AD000C84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

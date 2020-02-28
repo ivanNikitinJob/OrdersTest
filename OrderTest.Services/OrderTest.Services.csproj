@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OrderTest.Entities\OrderTest.Entities.csproj" />
+    <ProjectReference Include="..\OrderTest.Repositories\OrderTest.Repositories.csproj" />
+    <ProjectReference Include="..\OrderTest.ViewModels\OrderTest.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

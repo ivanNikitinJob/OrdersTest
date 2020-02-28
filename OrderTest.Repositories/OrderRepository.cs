@@ -1,21 +1,49 @@
-﻿using OrderTest.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using OrderTest.Entities;
+using OrderTest.Repositories.Context;
 using OrderTest.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace OrderTest.Repositories
 {
     public class OrderRepository : IOrderRepository
     {
-        Task<Order> IOrderRepository.GetOrder(Guid orderId)
+        private readonly ApplicationContext _context;
+
+        public OrderRepository(ApplicationContext applicationContext)
         {
-            throw new NotImplementedException();
+            _context = applicationContext;
         }
 
-        Task<List<Order>> IOrderRepository.GetOrdersList()
+        public async Task<Order> GetOrder(Guid orderId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var result = await _context.Orders.Where(x => x.Id == orderId).SingleOrDefaultAsync();
+                return result;
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+                return null;
+            }
+        }
+
+        public async Task<List<Order>> GetOrdersList()
+        {
+            try
+            {
+                var result = await _context.Orders.Include(x => x.ProductsList).ToListAsync();
+                return result;
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+                return null;
+            }
         }
     }
 }

@@ -1,14 +1,13 @@
-﻿using OrderTest.Entities;
+﻿using OrderTest.ViewModels;
+using OrderTest.ViewModels.Responses;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace OrderTest.Services.Interfaces
 {
     public interface IOrderService
     {
-        Task<List<Order>> GetOrdersList();
-        Task<Order> GetOrder(Guid orderId);
+        Task<GetOrdersResponseModel> GetOrdersList();
+        Task<GetOrderResponseModel> GetOrder(Guid orderId);
     }
 }
